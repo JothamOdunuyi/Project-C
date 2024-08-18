@@ -1,5 +1,5 @@
 local module = {}
-local TweenService = game:GetService("TweenService")--Get Tween Service
+local TweenService = game:GetService("TweenService")
 local plr = game.Players.LocalPlayer
 local EquipmentFunction = plr:WaitForChild("Game Values").Inventory.EquipmentFunction
 local isInStudio = game:GetService("RunService"):IsStudio()
@@ -92,10 +92,8 @@ function RemoveItem(item, amount)
 	if found then
 		if found.Amount - amount <= 0 then
 			table.remove(Inventory, foundi)
-			--print("Removed",func["Name"],"from inventory")
 		else
 			found.Amount -= amount
-			--print("Removed", amount,"from", func["Name"], self[found]["Amount"]+amount)
 		end
 	else
 		print("Coundn't find Item in inventory")
